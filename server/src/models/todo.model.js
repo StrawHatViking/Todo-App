@@ -1,10 +1,18 @@
-import { mongoose, Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const todoSchema = new Schema(
   {
     title: {
       type: String,
       required: true,
+    },
+    content: {
+      type: String,
+      required: true,
+    },
+    isDone: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true },
